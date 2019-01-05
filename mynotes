@@ -1,0 +1,59 @@
+allow smtp gmail
+https://myaccount.google.com/lesssecureapps?pli=1
+
+env. file configuration for smtp
+
+--------------------------------
+MAIL_DRIVER=smtp
+MAIL_HOST=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USERNAME=delimamerah.id@gmail.com
+MAIL_PASSWORD=########
+MAIL_ENCRYPTION=tls
+
+Command:
+php artisan make:auth
+php artisan make:controller DashboardController
+
+php artisan make:observer Invoice_detailObserver --model=Invoice_detail
+
+php artisan make:migration add_email_verification_to_users_table
+php artisan make:migration add_status_to_users_table
+php artisan migrate
+
+php artisan make:seeder UsersTableSeeder
+php artisan db:seed
+
+php artisan config:clear
+php artisan serve
+
+menambahkan field
+need to try
+https://investmentnovel.com/how-to-create-roles-and-permissions-in-laravel-from-scratch/
+https://datatables.net/
+https://scotch.io/@neobk25/laravel-bootstrap-datatable-full-example
+
+refrensi
+https://learninglaravel.net/
+https://daengweb.id/daftar-isi
+https://daengweb.id/membuat-aplikasi-invoice-laravel-57-1-generate-database
+https://daengweb.id/membuat-aplikasi-invoice-laravel-57-4-create-invoice
+https://scotch.io/tutorials/simple-laravel-layouts-using-blade
+https://www.youtube.com/watch?v=Z67byiLeK-w
+https://sujipthapa.co/blog/laravel-57-adding-support-for-login-with-username-or-email
+https://sujipthapa.co/blog/email-verification-after-registration-with-laravel-57
+
+https://stackoverflow.com/questions/52711697/what-is-the-best-approach-to-process-a-huge-amount-of-rows-in-laravel-using-data
+
+
+template
+https://adminlte.io/
+
+
+Git ignore
+/node_modules
+/storage/*.key
+/vendor
+.env
+npm-debug.log
+yarn-error.log
