@@ -49,8 +49,9 @@ https://stackoverflow.com/questions/52711697/what-is-the-best-approach-to-proces
 template
 https://adminlte.io/
 
-
+************
 Git ignore
+************
 /node_modules
 /storage/*.key
 /vendor
